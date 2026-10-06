@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <defs>
+    <!-- fond : dégradé « background-BLEU » de Qwetle -->
+    <linearGradient id="bg" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#2c3441"/>
+      <stop offset=".45" stop-color="#2e3e54"/>
+      <stop offset=".75" stop-color="#3a5067"/>
+      <stop offset="1" stop-color="#3c556d"/>
+    </linearGradient>
+    <!-- grand cube bleu -->
+    <linearGradient id="cubeBleu" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#2e4057"/>
+      <stop offset=".55" stop-color="#3c556d"/>
+      <stop offset="1" stop-color="#70a3bc"/>
+    </linearGradient>
+    <!-- point corail du logo -->
+    <linearGradient id="corail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0847f"/>
+      <stop offset=".42" stop-color="#ec6272"/>
+      <stop offset="1" stop-color="#e84667"/>
+    </linearGradient>
+    <!-- motif de losanges en fond -->
+    <pattern id="motif" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect x="18" y="18" width="24" height="24" rx="3" fill="#fff" transform="rotate(45 30 30)"/>
+    </pattern>
+    <linearGradient id="fadeMotif" x1="0" y1="0" x2="1" y2="0">
+      <stop offset=".45" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="maskMotif"><rect width="1200" height="300" fill="url(#fadeMotif)"/></mask>
+    <style>
+      .float1 { animation: f 7s ease-in-out infinite; }
+      .float2 { animation: f 7s ease-in-out infinite; animation-delay: -2.3s; }
+      .float3 { animation: f 7s ease-in-out infinite; animation-delay: -4.6s; }
+      .spin   { animation: s 40s linear infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes f { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+      @keyframes s { to { transform: rotate(360deg) } }
+      .name { font: 600 64px 'Quicksand', 'Comfortaa', 'Nunito', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #fffdf9; letter-spacing: -.5px; }
+      .sub  { font: 500 23px 'Quicksand', 'Nunito', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #f9d6dd; }
+      .mono { font: 500 16px 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #f4abba; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#motif)" opacity=".06" mask="url(#maskMotif)"/>
+
+  <!-- grand cube bleu, légèrement tourné, qui déborde -->
+  <g class="float1">
+    <rect x="890" y="-60" width="300" height="300" rx="62" fill="url(#cubeBleu)" transform="rotate(-4.7 1040 90)" opacity=".95"/>
+  </g>
+
+  <!-- les trois cubes roses empilés en perspective (grand 30 %, moyen 65 %, petit 100 %) -->
+  <g transform="translate(905 205)">
+    <g class="float3"><rect x="-150" y="-150" width="300" height="300" rx="46" fill="none" stroke="#f4abba" stroke-width="5" opacity=".3"  vector-effect="non-scaling-stroke" transform="translate(0 -26) scale(1 .42) rotate(45)"/></g>
+    <g class="float2"><rect x="-130" y="-130" width="260" height="260" rx="40" fill="none" stroke="#f4abba" stroke-width="6" opacity=".65" vector-effect="non-scaling-stroke" transform="translate(0 -6) scale(1 .42) rotate(45)"/></g>
+    <g class="float1"><rect x="-110" y="-110" width="220" height="220" rx="34" fill="none" stroke="#f4abba" stroke-width="7" vector-effect="non-scaling-stroke" transform="translate(0 12) scale(1 .42) rotate(45)"/></g>
+  </g>
+
+  <!-- petits cubes « personnages » -->
+  <g class="float2"><rect x="760" y="44" width="46" height="46" rx="11" fill="none" stroke="#f4abba" stroke-width="3" opacity=".8" class="spin"/></g>
+  <g class="float3"><rect x="1135" y="232" width="34" height="34" rx="8" fill="url(#corail)"/></g>
+  <g class="float1"><rect x="700" y="196" width="18" height="18" rx="4" fill="#6fa2bb" opacity=".8"/></g>
+
+  <!-- texte -->
+  <text x="64" y="102" class="mono">~/qwetle $ whoami</text>
+  <text x="60" y="170" class="name" textLength="452" lengthAdjust="spacingAndGlyphs">Léo Couffinhal</text>
+  <rect x="522" y="155" width="17" height="17" rx="3" fill="url(#corail)"/>
+  <rect x="64" y="190" width="120" height="5" rx="2.5" fill="url(#corail)"/>
+  <text x="64" y="234" class="sub">Développeur Full Stack · TypeScript · PHP · Self-hosting</text>
+</svg>
