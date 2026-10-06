@@ -19,9 +19,9 @@
 
 ### 👋 À propos
 
-Développeur **full stack** formé à **Epitech**, je conçois des applications web de bout en bout : de la base de données à l'interface, jusqu'au déploiement sur mes propres serveurs.
+Développeur **full stack**, je conçois des applications web de bout en bout : de la base de données à l'interface, jusqu'au déploiement et à l'hébergement.
 
-J'ai travaillé en ESN chez **Niji** (SaaS santé, APIs REST/GraphQL, application de données de vol), chez **Cdiscount** côté backend, et en indépendant via **Qwetle** sur des eCRF et des outils sur mesure pour des équipes de recherche clinique (Inserm, CHU de Bordeaux).
+J'ai travaillé aussi bien en équipe produit sur des SaaS et des APIs à fort trafic qu'en indépendant sur des outils métier sur mesure, notamment pour le secteur de la santé et de la recherche. Ce qui me plaît : comprendre un métier, puis livrer un outil simple, fiable et maintenable.
 
 ```ts
 const leo = {
